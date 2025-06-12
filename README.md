@@ -133,11 +133,18 @@ git clone https://github.com/TalhaQureshi324/Food-Demand-Forecasting-Using-Time-
 cd Food-Demand-Forecasting-Using-Time-series-analysis-LSTM-model-
 ```
 
-2. Place all `.csv` files in the root directory.
+2. **Prepare the dataset**:
+   - By default, the code expects all CSV files to be located directly in the **root directory**.
+   - If your CSV files are inside the `DataSet/` folder, you have two options:
+     - **Option A**: Extract all `.csv` files from the `DataSet` folder into the root project directory.
+     - **Option B**: If you want to keep them inside `DataSet/`, you must modify the file paths in the code to reflect the folder structure. For example:
+       ```python
+       df = pd.read_csv("DataSet/historical_product_demand1.csv")
+       ```
 
 3. Run the script:
 ```bash
-python your_main_script.py
+python AI_project_Food_demand_forecasting.py
 ```
 
 4. Outputs like metrics and visualizations will be saved in the same folder.
